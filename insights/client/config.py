@@ -152,7 +152,7 @@ DEFAULT_OPTS = {
     },
     'http_timeout': {
         # non-CLI
-        'default': 10
+        'default': 10.0
     },
     'insecure_connection': {
         # non-CLI
@@ -534,7 +534,7 @@ class InsightsConfig(object):
         d = dict(parsedconfig.items(constants.app_name))
         for key in d:
             try:
-                if key == 'retries' or key =='cmd_timeout':
+                if key == 'retries' or key == 'cmd_timeout':
                     d[key] = parsedconfig.getint(constants.app_name, key)
                 if key == 'http_timeout':
                     d[key] = parsedconfig.getfloat(constants.app_name, key)
