@@ -537,6 +537,8 @@ class DefaultSpecs(Specs):
     rabbitmq_startup_err = simple_file("/var/log/rabbitmq/startup_err")
     rabbitmq_startup_log = simple_file("/var/log/rabbitmq/startup_log")
     rabbitmq_users = simple_command("/usr/sbin/rabbitmqctl list_users")
+    random_avail  = simple_file("proc/sys/kernel/random/entropy_avail")
+    random_poolsize  = simple_file("proc/sys/kernel/random/poolsize")
     rc_local = simple_file("/etc/rc.d/rc.local")
     redhat_release = simple_file("/etc/redhat-release")
     resolv_conf = simple_file("/etc/resolv.conf")
